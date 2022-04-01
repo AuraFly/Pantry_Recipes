@@ -1,1 +1,47 @@
 
+
+.input {
+    width: 75%;
+    margin-left: 5px;
+}
+
+.select {
+    margin-left: 5px;
+}
+
+.checkbox {
+    margin-left: 10px;
+}
+
+.hero-body {
+    text-align: center;
+    height: 50px;
+    margin-bottom: 45px;
+}
+
+.button {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.selector {
+    font-weight: bold;
+    font-size: large;
+}
+
+.checkbox {
+    margin-top: 10px;
+}
+
+.ingredient {
+    margin-left: 10px;
+}
+
+.restriction {
+    margin-left: 10px;
+}
+
+.backgroundImage {
+    /* background: url(/Homework/Pantry_Recipes/assets/Images/BackgroundTest4.avif); */
+    background-size: cover;
+}
