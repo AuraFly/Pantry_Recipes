@@ -1,26 +1,37 @@
 
 
 .input {
-    width: 75%;
-    margin-left: 5px;
+    position: relative;
+    bottom: 1px;
+    vertical-align: middle;
 }
+
+.label {
+    display: block;
+    /* align-items: center; */
+}
+
 
 .select {
     margin-left: 5px;
 }
 
 .checkbox {
-    margin-left: 10px;
+    margin-left: 10px;      
+
+        
 }
 
 .hero-body {
     text-align: center;
     height: 50px;
     margin-bottom: 45px;
+    font-family: "Righteous";
+    
 }
 
 .button {
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 10px;
 }
 
@@ -31,7 +42,8 @@
 
 .checkbox {
     margin-top: 10px;
-}
+    }
+
 
 .ingredient {
     margin-left: 10px;
@@ -41,15 +53,31 @@
     margin-left: 10px;
 }
 
-/* .backgroundImage {
-    background-image: url(/Homework/Pantry_Recipes/assets/Images/BackgroundTest4.avif);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-<<<<<<< HEAD
+.tile {
+    position: absolute;
+    float: right;
+    top:  20%;
+    left: 50%;
     
+}    
+
+.title {
+    opacity: 100%;
 }
-=======
+
+.api-text{
+    width: 500px;
+    font-family: "Righteous"
+}
+
+/* .container {
+    position: absolute;
+    background-color: white;
+    /* justify-content: center; */
+/* }
+
+.backgroundImage {
+    justify-content: center;
+    
 } */
->>>>>>> 171e6ff48d706a99b8aa66b7111c22ca4b9e2760
+ 
