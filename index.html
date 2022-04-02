@@ -1,157 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="https://kit.fontawesome.com/54da991eb7.js" crossorigin="anonymous"></script>
-    <title>Pantry Recipes</title>
 
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Righteous&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <script src="https://kit.fontawesome.com/54da991eb7.js" crossorigin="anonymous"></script>
+  <title>Pantry Recipes</title>
 
-  <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">     
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+</head>
+
+<body>
+  <!-- <div id="modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="box">
+        <article class="media">
+          <div class="media-left">
+            <div class="media-content">
+              <div class="content">
+                <p>
+                  <strong>Site Notification</strong>
+                  <br>
+                  For full utilization of this site, please visit Kroger.com and create an account.
+                </p>
+              </div>
+              <button class="button is-info is-small" id="next"><a href="https://www.kroger.com">Kroger
+                  Site</a></button>
+              <button class="button is-danger is-small" id="closebtn">Proceed</button>
+            </div>
+        </article>
+      </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div> -->
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">     
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item">
+        Home
+      </a>
+
+      <a class="navbar-item">
+        Documentation
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Contact Us
         </a>
-      </div>
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item">
-            Home
+
+        <div class="navbar-dropdown">
+          <div class="navbar-item"><a href="https://github.com/AuraFly">Jordan</a></div>
+          <div class="navbar-item"><a href="https://github.com/ShaneWilmes">Shane</a></div>  
+          <div class="navbar-item"><a href="https://www.davidirving.net">David</a></div>
+
           </a>
-    
-          <a class="navbar-item">
-            Documentation
-          </a>
-    
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              More
-            </a>
-    
-            <div class="navbar-dropdown">
-              <a class="navbar-item">
-                Who We Are
-              </a>
-              <a class="navbar-item">
-                Contact Us
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="navbar-end">
-          <div class="navbar-item"> -->
-          </div>
         </div>
       </div>
-    </nav>
     </div>
-    <header>
-        <section class="hero is-link">
-            <div class="hero-body">
-              <p class="title">
-                Pantry Recipes
-              </p>
-              <p class="subtitle">
-                Put those ingredients to use!
-              </p>
-            </div>
-          </section>
-    </header>
+    <div class="navbar-end">
+      <div class="navbar-item"> -->
+      </div>
+    </div>
+  </div>
+</nav>
+</div>
 
 
-<div class="columns">
+  
+  <header>
+    <section class="hero is-link">
+      <div class="hero-body">
+        <p class="title">
+          Pantry Recipes
+        </p>
+        <p class="subtitle">
+          Put those ingredients to use!
+        </p>
+      </div>
+    </section>
+  </header>
+
+
+  <div class="columns">
     <section class="column is-narrow">
-    <div class="field">
-  <label class="label ingredient">Ingredient</label>
-  <div class="control ingredientInput">
-    <input class="input" type="text" placeholder="Enter your ingredient">
-  </div>
-</div>
+      <div class="field">
+        <label class="label ingredient">Ingredient</label>
+        <div class="control ingredientInput">
+          <input class="input" type="text" placeholder="Enter your ingredient">
+        </div>
+      </div>
 
-<div class="field">
-  <label class="label restriction">Subject</label>
-  <div class="control">
-    <div class="select">
-      <select id = 'dietR'>
-        <option value="null">Dietary Restrictions</option>
-        <option value="low-sugar">Low Sugar</option>
-        <option value="paleo">Paleo</option>
-        <option value="vegan">Vegan</option>
-        <option value="vegetarian">Vegetarian</option>
-        <option value="pescatarian">Pescatarian</option>
-      </select>
-    </div>
-  </div>
-</div>
+      <div class="field">
+        <label class="label restriction">Subject</label>
+        <div class="control">
+          <div class="select">
+            <select id='dietR'>
+              <option value="null">Dietary Restrictions</option>
+              <option value="low-sugar">Low Sugar</option>
+              <option value="paleo">Paleo</option>
+              <option value="vegan">Vegan</option>
+              <option value="vegetarian">Vegetarian</option>
+              <option value="pescatarian">Pescatarian</option>
+            </select>
+          </div>
+        </div>
+      </div>
 
-<section class = "checkboxsec">
-  <label class = "selector">Allergies</label>
-  <br>
-  <label class = "checkbox">
-    <input type = "checkbox" value="dairy-free">
-    Milk
-  </label>
-  
-  <label class = "checkbox">
-    <input type = "checkbox" value="egg-free">
-    Eggs
-  </label>
-  
-  <label class = "checkbox">
-    <input type = "checkbox" value="peanut-free">
-    Peanuts
-  </label>
-  
-  <label class = "checkbox">
-    <input type = "checkbox" value="soy-free">
-    Soy
-  </label>
-<br>
+      <section class="checkboxsec">
+        <label class="selector">Allergies</label>
+        <br>
+        <label class="checkbox">
+          <input type="checkbox" value="dairy-free">
+          Milk
+        </label>
 
-  <label class = "checkbox">
-    <input type = "checkbox" value="wheat-free">
-    Wheat
-  </label>  
-  
-  <label class = "checkbox">
-    <input type = "checkbox" value="tree-nut-free">
-    Tree Nuts
-  </label>  
-  
-  <label class = "checkbox">
-    <input type = "checkbox" value="shellfish-free">
-    Shellfish
-  </label>  
-  
-  <label class = "checkbox">
-    <input type = "checkbox" value="sesame-free">
-    Sesame
-  </label>x`
+        <label class="checkbox">
+          <input type="checkbox" value="egg-free">
+          Eggs
+        </label>
 
-<div class="field is-grouped">
-  <div class="control">
-    <button class="button is-link">Submit</button>
-  </div>
-</div>
-</section>
+        <label class="checkbox">
+          <input type="checkbox" value="peanut-free">
+          Peanuts
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" value="soy-free">
+          Soy
+        </label>
+        <br>
+
+        <label class="checkbox">
+          <input type="checkbox" value="wheat-free">
+          Wheat
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" value="tree-nut-free">
+          Tree Nuts
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" value="shellfish-free">
+          Shellfish
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" value="sesame-free">
+          Sesame
+        </label>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link">Submit</button>
+          </div>
+        </div>
+      </section>
     </section>
 
-<div class="column backgroundImage">
-  <div class="container backgroundImage">
-    <img src="./assets/Images/BackgroundTest4.avif">
+    <div class="column">
+
+      <div class="container backgroundImage">
+        <div class="tile is-ancestor">
+          <div class="tile is-child">
+            <p class="title api-text">test</p>
+          </div>
+
+        </div>
+        <img src="./assets/Images/BackgroundTest4.avif">
+
+      </div>
+    </div>
   </div>
-</div>
-</div>
 
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./assets/js/script.js"></script>
-  </body>
 </html>
