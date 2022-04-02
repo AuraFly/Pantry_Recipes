@@ -41,7 +41,10 @@
     margin-left: 10px;
 }
 
-.backgroundImage {
-    /* background: url(/Homework/Pantry_Recipes/assets/Images/BackgroundTest4.avif); */
+/* .backgroundImage {
+    background-image: url(/Homework/Pantry_Recipes/assets/Images/BackgroundTest4.avif);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
-}
+} */
