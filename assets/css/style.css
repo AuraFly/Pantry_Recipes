@@ -17,9 +17,7 @@
 }
 
 .checkbox {
-    margin-left: 10px;      
-
-        
+    margin-left: 10px;
 }
 
 .hero-body {
@@ -53,21 +51,60 @@
     margin-left: 10px;
 }
 
-.tile {
-    position: absolute;
-    float: right;
-    top:  20%;
-    left: 50%;
-    
+/* style for individual generated tiles */
+.tile.is-child {
+    background-color: aliceblue;
+    opacity: 75%;
+    padding: 5px;
+    border: 2px solid black;
+}    
+
+/* tyle for container holding search result tiles */
+.tile.is-ancestor {
+padding-top: 40px;
 }    
 
 .title {
     opacity: 100%;
 }
 
+/* Style for recipe titles */
+.rtitle {
+    font-weight: bold;
+    font-family: "Righteous";
+}
+
+/* Style for images for search results */
+.rimage {
+    height: 120px;
+    float: left;
+    padding-right: 10px;
+}
+
+
+/* Style for search output header above generated grid */
+h3 {
+    font-size: 30px;
+    font-weight: bolder;
+    position: absolute;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    color: grey;
+}
+
+/* Style for search result p content */
+.rCal, .rIngs, .rServ {
+    font-weight: bold;
+}
+
 .api-text{
     width: 500px;
     font-family: "Righteous"
+}
+
+.container {
+    color: black;
 }
 
 /* .container {
