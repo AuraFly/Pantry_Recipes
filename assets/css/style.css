@@ -1,3 +1,9 @@
+html {
+    background: url(./assets/Images/IMG_1336);
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
 
 
 .input {
@@ -36,6 +42,7 @@
 .selector {
     font-weight: bold;
     font-size: large;
+    margin-left: 10px;
 }
 
 .checkbox {
@@ -51,6 +58,32 @@
     margin-left: 10px;
 }
 
+h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    padding-bottom: 10px;
+}
+
+#title1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#ingredients1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#servings1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#calories1 {
+    font-size: 20px;
+    font-weight: bold;
+}
 /* style for individual generated tiles */
 .tile.is-child {
     background-color: aliceblue;

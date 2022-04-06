@@ -9,9 +9,22 @@ $(document).ready(function () {
   });
 });
 
+
+
+//clear text field
+function ClearFields() {
+document.getElementById("ingField").value = "",
+document.querySelectorAll('input[type=checkbox]').checked = false;
+}
+
+//uncheck tick boxes
+// function uncheck() {
+//   let inputs = document.querySelectorAll('input[type=checkbox]:checked')
+//   inputs.checked = false;
+
+
 var submitBtn = document.querySelector('.button');
 var searchCount = 0;
-var elCount = 0;
 
 //Main API function for edemam
 function getapiEdemam() {
@@ -30,6 +43,12 @@ function getapiEdemam() {
   //replacing white space in search to something understandable for the request URL
   let cbConfirmed = algyOpt.toString().replaceAll(',', '&');
 
+  // If statement making sure to add to the URL string only if there are items that are checked.
+  if (cbConfirmed !== null) {
+    var cbFinal = "&health=" + cbConfirmed
+  } else if (cbConfirmed === null) {
+    cbFinal = ""
+  };
 
   //Main url generation
   var requestUrl =
