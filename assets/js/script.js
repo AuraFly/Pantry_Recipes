@@ -54,10 +54,14 @@ function getapiEdemam() {
   var requestUrl =
     'https://api.edamam.com/api/recipes/v2?type=public&q=' +
     ingInput +
-    '&app_id=69bfd030&app_key=a13d6c322f775c2a3d1839b8fbb5e288&limit=20' +
-    '&' +
-    dietRes +
-    cbFinal;
+    '&app_id=69bfd030&app_key=a13d6c322f775c2a3d1839b8fbb5e288&limit=20'
+
+      // If statement making sure to add to the URL string only if there are items that are checked.
+  if (cbConfirmed !== null) {
+    requestUrl.append = '&health=' + cbConfirmed}
+
+  if (dietRes !== "null") {
+    requestUrl.append = '&' + dietRes}
 
   //searchcount var will be to keep track of how many times the loop has ran to make individual ids
     searchCount++
@@ -80,6 +84,13 @@ function getapiEdemam() {
 
       //primary loop generating tiles for each result
       dArray[0].hits.forEach((iteminLoop) => {
+
+        //adds counter to created elements to separate the IDs of each element.
+        elCount++;
+        var recLink = iteminLoop.recipe.shareAs
+
+        console.log(dArray[0].hits)
+
         var resultTile = $("<div>")
         .attr({
           "class": "tile is-child"
@@ -87,19 +98,22 @@ function getapiEdemam() {
 
         $("#ancestor").append(resultTile);
 
-        var recTitle = $("<p>")
+        var recTitle = $("<a>")
         .text(iteminLoop.recipe.label)
         .attr({
           "class": "rtitle",
-          "id": "title" + searchCount
+          "id": "title" + `${elCount}`,
+          "href": recLink
         });
+
 
         var recImg = $("<img>")
         .attr({
           "class": "rimage",
-          "id": "image" + searchCount,
+          "id": "image" + elCount,
           "src": iteminLoop.recipe.image,
-          "alt": "recipeImg#" + searchCount
+          "alt": "recipeImg#" + elCount,
+          "href": recLink
         });
 
         //removing decimals from calorie count and dividing the total calories by servings
@@ -109,24 +123,31 @@ function getapiEdemam() {
         .text("Calories Per Serving: " + calperServ)
         .attr({
           "class": "rCal",
-          "id": "calories" + searchCount,
+          "id": "calories" + elCount,
         });
 
         var neededIng = $("<p>")
         .text("Ingredients: " + iteminLoop.recipe.ingredients.length)
         .attr({
           "class": "rIngs",
-          "id": "ingredients" + searchCount,
+          "id": "ingredients" + elCount,
         });
 
         var recServ = $("<p>")
         .text("Servings: " + iteminLoop.recipe.yield)
         .attr({
           "class": "rServ",
-          "id": "servings" + searchCount,
+          "id": "servings" + elCount,
         });
 
-        $(resultTile).append(recTitle, recImg, recCal, neededIng, recServ)
+        var recHealth = $("<p>")
+        .text("Tags: " + iteminLoop.recipe.healthLabels.join(' / '))
+        .attr({
+          "class": "rHealth",
+          "id": "health" + elCount,
+        });
+
+        $(resultTile).append(recTitle, recImg, recCal, neededIng, recServ, recHealth)
 
     });
 
@@ -136,4 +157,3 @@ function getapiEdemam() {
 
 //event listener for search button
 submitBtn.addEventListener('click', getapiEdemam);
-
