@@ -17,14 +17,20 @@ document.getElementById("ingField").value = "",
 document.querySelectorAll('input[type=checkbox]').checked = false;
 }
 
-//uncheck tick boxes
-// function uncheck() {
-//   let inputs = document.querySelectorAll('input[type=checkbox]:checked')
-//   inputs.checked = false;
-
-
 var submitBtn = document.querySelector('.button');
+var bhBtn = document.getElementById("bhBtn")
 var searchCount = 0;
+var elCount = 0;
+var viewedRecipe;
+var dArray = [];
+
+// main function that will remove previous search results when a new one is ran
+//it is called when the main search button is clicked as part of the getapiEdemam function
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+  }
+}
 
 //Main API function for edemam
 function getapiEdemam() {
@@ -66,8 +72,15 @@ function getapiEdemam() {
   //searchcount var will be to keep track of how many times the loop has ran to make individual ids
     searchCount++
     localStorage.setItem("search" + searchCount, requestUrl);
+    var elCount = 0;
 
   console.log(requestUrl)
+
+
+  //sets var for parent tile that houses the following generated files
+  //then calls the function that deletes all previous tiles
+  const remTiles = document.querySelector('#ancestor');
+  removeAllChildNodes(remTiles);
 
   // main fetch function
   fetch(requestUrl)
@@ -76,7 +89,6 @@ function getapiEdemam() {
     })
     .then(function (data) {
       //pushing data to an array
-      var dArray = [];
       dArray.push(data);
 
       //changes h3 after search is ran
@@ -95,7 +107,7 @@ function getapiEdemam() {
         .attr({
           "class": "tile is-child"
         });
-
+  
         $("#ancestor").append(resultTile);
 
         var recTitle = $("<a>")
@@ -147,13 +159,124 @@ function getapiEdemam() {
           "id": "health" + elCount,
         });
 
-        $(resultTile).append(recTitle, recImg, recCal, neededIng, recServ, recHealth)
+        var recBtn = $("<button>")
+        .text("See Recipe Details")
+        .attr({
+          "class": "rBtn",
+          "id": "rBtn" + elCount,
+        });
 
+        $(resultTile).append(recTitle, recImg, recCal, neededIng, recServ, recHealth, recBtn)
+
+        
     });
-
-    }
-    );
+  })
 }
 
 //event listener for search button
 submitBtn.addEventListener('click', getapiEdemam);
+
+$("body").on('click', '#rBtn1', function(){
+  var viewedRecipe = dArray[0].hits[0];
+  localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
+  recipeDetails();
+});
+$("body").on('click', '#rBtn2', function(){
+  var viewedRecipe = dArray[0].hits[1];
+  localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
+  recipeDetails();
+});
+$("body").on('click', '#rBtn3', function(){
+  var viewedRecipe = dArray[0].hits[2];
+  localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
+  recipeDetails();
+});
+$("body").on('click', '#rBtn4', function(){
+  var viewedRecipe = dArray[0].hits[3];
+  localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
+  recipeDetails();
+});
+$("body").on('click', '#rBtn5', function(){
+  var viewedRecipe = dArray[0].hits[4];
+  localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
+  recipeDetails();
+});
+$("body").on('click', '#rBtn6', function(){
+  var viewedRecipe = dArray[0].hits[5];
+  localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
+  recipeDetails();
+});
+$("body").on('click', '#rBtn7', function(){
+  var viewedRecipe = dArray[0].hits[6];
+  localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
+  recipeDetails();
+});
+$("body").on('click', '#rBtn8', function(){
+  var viewedRecipe = dArray[0].hits[7];
+  localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
+  recipeDetails();
+});
+$("body").on('click', '#rBtn9', function(){
+  var viewedRecipe = dArray[0].hits[8];
+  localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
+  recipeDetails();
+});
+$("body").on('click', '#rBtn10', function(){
+  var viewedRecipe = dArray[0].hits[9];
+  localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
+  recipeDetails();
+});
+$("body").on('click', '#rBtn11', function(){
+  var viewedRecipe = dArray[0].hits[10];
+  localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
+  recipeDetails();
+});
+$("body").on('click', '#rBtn12', function(){
+  var viewedRecipe = dArray[0].hits[11];
+  localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
+  recipeDetails();
+});
+$("body").on('click', '#rBtn13', function(){
+  var viewedRecipe = dArray[0].hits[12];
+  localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
+  recipeDetails();
+});
+$("body").on('click', '#rBtn14', function(){
+  var viewedRecipe = dArray[0].hits[13];
+  localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
+  recipeDetails();
+});
+$("body").on('click', '#rBtn15', function(){
+  var viewedRecipe = dArray[0].hits[14];
+  localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
+  recipeDetails();
+});
+$("body").on('click', '#rBtn16', function(){
+  var viewedRecipe = dArray[0].hits[15];
+  localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
+  recipeDetails();
+});
+$("body").on('click', '#rBtn17', function(){
+  var viewedRecipe = dArray[0].hits[16];
+  localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
+  recipeDetails();
+});
+$("body").on('click', '#rBtn18', function(){
+  var viewedRecipe = dArray[0].hits[17];
+  localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
+  recipeDetails();
+});
+$("body").on('click', '#rBtn19', function(){
+  var viewedRecipe = dArray[0].hits[18];
+  localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
+  recipeDetails();
+});
+$("body").on('click', '#rBtn20', function(){
+  var viewedRecipe = dArray[0].hits[19];
+  localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
+  recipeDetails();
+});
+
+function recipeDetails() {
+  window.location = "./recipe-details.html";
+}
