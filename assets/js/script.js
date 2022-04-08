@@ -21,12 +21,11 @@ var submitBtn = document.querySelector('.button');
 var bhBtn = document.getElementById("bhBtn")
 var searchCount = 0;
 var elCount = 0;
-var viewedRecipe;
 var dArray = [];
 
 // main function that will remove previous search results when a new one is ran
 //it is called when the main search button is clicked as part of the getapiEdemam function
-function removeAllChildNodes(parent) {
+function remoldTiles(parent) {
   while (parent.firstChild) {
       parent.removeChild(parent.firstChild);
   }
@@ -80,7 +79,7 @@ function getapiEdemam() {
   //sets var for parent tile that houses the following generated files
   //then calls the function that deletes all previous tiles
   const remTiles = document.querySelector('#ancestor');
-  removeAllChildNodes(remTiles);
+  remoldTiles(remTiles);
 
   // main fetch function
   fetch(requestUrl)
@@ -88,8 +87,10 @@ function getapiEdemam() {
       return response.json();
     })
     .then(function (data) {
+      var dArray = [];
       //pushing data to an array
       dArray.push(data);
+      localStorage.setItem("originalData", JSON.stringify(dArray))
 
       //changes h3 after search is ran
       searchHead.textContent = "Here are recipes that use '" + ingInputInit + "':";
@@ -177,102 +178,122 @@ function getapiEdemam() {
 submitBtn.addEventListener('click', getapiEdemam);
 
 $("body").on('click', '#rBtn1', function(){
-  var viewedRecipe = dArray[0].hits[0];
+  var ogData = JSON.parse(localStorage.getItem("originalData"));
+  var viewedRecipe = ogData[0].hits[0];
   localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
   recipeDetails();
 });
 $("body").on('click', '#rBtn2', function(){
-  var viewedRecipe = dArray[0].hits[1];
+  var ogData = JSON.parse(localStorage.getItem("originalData"));
+  var viewedRecipe = ogData[0].hits[1];
   localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
   recipeDetails();
 });
 $("body").on('click', '#rBtn3', function(){
-  var viewedRecipe = dArray[0].hits[2];
+  var ogData = JSON.parse(localStorage.getItem("originalData"));
+  var viewedRecipe = ogData[0].hits[2];
   localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
   recipeDetails();
 });
 $("body").on('click', '#rBtn4', function(){
-  var viewedRecipe = dArray[0].hits[3];
+  var ogData = JSON.parse(localStorage.getItem("originalData"));
+  var viewedRecipe = ogData[0].hits[3];
   localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
   recipeDetails();
 });
 $("body").on('click', '#rBtn5', function(){
-  var viewedRecipe = dArray[0].hits[4];
+  var ogData = JSON.parse(localStorage.getItem("originalData"));
+  var viewedRecipe = ogData[0].hits[4];
   localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
   recipeDetails();
 });
 $("body").on('click', '#rBtn6', function(){
-  var viewedRecipe = dArray[0].hits[5];
+  var ogData = JSON.parse(localStorage.getItem("originalData"));
+  var viewedRecipe = ogData[0].hits[5];
   localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
   recipeDetails();
 });
 $("body").on('click', '#rBtn7', function(){
-  var viewedRecipe = dArray[0].hits[6];
+  var ogData = JSON.parse(localStorage.getItem("originalData"));
+  var viewedRecipe = ogData[0].hits[6];
   localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
   recipeDetails();
 });
 $("body").on('click', '#rBtn8', function(){
-  var viewedRecipe = dArray[0].hits[7];
+  var ogData = JSON.parse(localStorage.getItem("originalData"));
+  var viewedRecipe = ogData[0].hits[7];
   localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
   recipeDetails();
 });
 $("body").on('click', '#rBtn9', function(){
-  var viewedRecipe = dArray[0].hits[8];
+  var ogData = JSON.parse(localStorage.getItem("originalData"));
+  var viewedRecipe = ogData[0].hits[8];
   localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
   recipeDetails();
 });
 $("body").on('click', '#rBtn10', function(){
-  var viewedRecipe = dArray[0].hits[9];
+  var ogData = JSON.parse(localStorage.getItem("originalData"));
+  var viewedRecipe = ogData[0].hits[9];
   localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
   recipeDetails();
 });
 $("body").on('click', '#rBtn11', function(){
-  var viewedRecipe = dArray[0].hits[10];
+  var ogData = JSON.parse(localStorage.getItem("originalData"));
+  var viewedRecipe = ogData[0].hits[10];
   localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
   recipeDetails();
 });
 $("body").on('click', '#rBtn12', function(){
-  var viewedRecipe = dArray[0].hits[11];
+  var ogData = JSON.parse(localStorage.getItem("originalData"));
+  var viewedRecipe = ogData[0].hits[11];
   localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
   recipeDetails();
 });
 $("body").on('click', '#rBtn13', function(){
-  var viewedRecipe = dArray[0].hits[12];
+  var ogData = JSON.parse(localStorage.getItem("originalData"));
+  var viewedRecipe = ogData[0].hits[12];
   localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
   recipeDetails();
 });
 $("body").on('click', '#rBtn14', function(){
-  var viewedRecipe = dArray[0].hits[13];
+  var ogData = JSON.parse(localStorage.getItem("originalData"));
+  var viewedRecipe = ogData[0].hits[13];
   localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
   recipeDetails();
 });
 $("body").on('click', '#rBtn15', function(){
-  var viewedRecipe = dArray[0].hits[14];
+  var ogData = JSON.parse(localStorage.getItem("originalData"));
+  var viewedRecipe = ogData[0].hits[14];
   localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
   recipeDetails();
 });
 $("body").on('click', '#rBtn16', function(){
-  var viewedRecipe = dArray[0].hits[15];
+  var ogData = JSON.parse(localStorage.getItem("originalData"));
+  var viewedRecipe = ogData[0].hits[15];
   localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
   recipeDetails();
 });
 $("body").on('click', '#rBtn17', function(){
-  var viewedRecipe = dArray[0].hits[16];
+  var ogData = JSON.parse(localStorage.getItem("originalData"));
+  var viewedRecipe = ogData[0].hits[16];
   localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
   recipeDetails();
 });
 $("body").on('click', '#rBtn18', function(){
-  var viewedRecipe = dArray[0].hits[17];
+  var ogData = JSON.parse(localStorage.getItem("originalData"));
+  var viewedRecipe = ogData[0].hits[17];
   localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
   recipeDetails();
 });
 $("body").on('click', '#rBtn19', function(){
-  var viewedRecipe = dArray[0].hits[18];
+  var ogData = JSON.parse(localStorage.getItem("originalData"));
+  var viewedRecipe = ogData[0].hits[18];
   localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
   recipeDetails();
 });
 $("body").on('click', '#rBtn20', function(){
-  var viewedRecipe = dArray[0].hits[19];
+  var ogData = JSON.parse(localStorage.getItem("originalData"));
+  var viewedRecipe = ogData[0].hits[19];
   localStorage.setItem("storedRecipe", JSON.stringify(viewedRecipe))
   recipeDetails();
 });
