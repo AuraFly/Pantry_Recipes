@@ -1,10 +1,9 @@
 html {
-    background: url(./assets/Images/IMG_1336.jpg);
+    background: url(../Images/IMG_1336.jpg);
     background-size: cover;
     background-attachment: fixed;
     
 }
-
 
 .input {
     position: relative;
@@ -63,6 +62,10 @@ h3 {
     font-weight: bold;
     color: black;
     padding-bottom: 10px;
+}
+
+h3.resultsh {
+    padding: 5px;
 }
 
 #title1 {
@@ -167,4 +170,12 @@ h3 {
 
 #mainParent {
     justify-content: center;
+}
+
+#tile.is-child {
+    position: relative;
+    margin-top: 20px;
+}
+#map {
+    bottom: 0;
 }
