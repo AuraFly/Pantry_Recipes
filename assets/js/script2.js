@@ -6,7 +6,8 @@ var viewedRecipe = JSON.parse(localStorage.getItem("storedRecipe"));
 
     var recipeMain = $("<div>")
     .attr({
-    "class": "tile is-child"
+    "class": "tile is-child",
+    "id": "main1"
     });
 
     $("#mainParent").append(recipeMain);
@@ -18,6 +19,13 @@ var viewedRecipe = JSON.parse(localStorage.getItem("storedRecipe"));
         "id": "recipeH2",
     });
 
+    var mainp = $("<p>")
+    .text("~" + viewedRecipe.recipe.dishType[0].toUpperCase() + "/" + viewedRecipe.recipe.cuisineType[0].toUpperCase() + "~")
+    .attr({
+        "class": "headp",
+        "id": "headSub",
+    });
+
     var mainImage = $("<img>")
     .attr({
         "class": "mainImage",
@@ -26,6 +34,39 @@ var viewedRecipe = JSON.parse(localStorage.getItem("storedRecipe"));
         "alt": "selectedRecImg"
     });
 
+    var mainingUL = $("<ul>")
+    .text("INGREDIENTS:")
+    .attr({
+        "class": "ingrUl",
+    });
+
+    var mainnutrUL = $("<ul>")
+    .text("NUTRITIONAL INFO:")
+    .attr({
+        "class": "ingrUl",
+    });
+
+    $(recipeMain).append(mainHeader, mainImage, mainp, mainingUL, mainnutrUL );
+
+    viewedRecipe.recipe.ingredientLines.forEach((iteminloop) => {
+        var ingLi = $("<li>")
+        .text(iteminloop)
+        .attr({
+            "class": "listitems"
+        })
+
+        $(mainingUL).append(ingLi);
+    });
+
+    // viewedRecipe.recipe.totalDaily.forEach((iteminloop) => {
+    //     var nutrLi = $("<li>")
+    //     .text(iteminloop)
+    //     .attr({
+    //         "class": "listitems"
+    //     })
+
+    //     $(mainnutrUL).append(nutrLi);
+    // });
 
     navigator.geolocation.getCurrentPosition(
         function (position) {
@@ -51,8 +92,5 @@ var viewedRecipe = JSON.parse(localStorage.getItem("storedRecipe"));
      });
      }
      
-
-
-    $(recipeMain).append(mainHeader, mainImage )
 
 bhBtn.addEventListener('click', movetoMain);

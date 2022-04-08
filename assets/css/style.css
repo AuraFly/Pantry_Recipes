@@ -89,8 +89,8 @@ h3.resultsh {
 }
 /* style for individual generated tiles */
 .tile.is-child {
-    background-color: aliceblue;
-    opacity: 75%;
+    background-color: #CAD3C8;
+    opacity: 85%;
     padding: 5px;
     border: 2px solid black;
 }    
@@ -170,6 +170,41 @@ h3 {
 
 #mainParent {
     justify-content: center;
+    text-align: center;
+    color: black;
+    font-family: Righteous;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+#main1 {
+    background-color: #768b9e;
+}
+
+.headp {
+    font-style: italic;
+    font-size: 20px;
+    color: black
+}
+
+.ingrUl {
+    justify-content: left;
+    text-align: left;
+    list-style: circle;
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: bolder;
+    border: 2px solid black;
+    border-radius: 7px;
+    max-width: 20%;
+}
+
+.listitems {
+    text-align: center;
+    font-size: 15px;
+    background-color: rgb(160, 196, 184);
+    border-radius: 7px;
+    border: 1px black solid;
 }
 
 #tile.is-child {
