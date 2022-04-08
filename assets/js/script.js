@@ -8,13 +8,18 @@ $(document).ready(function () {
     $(".modal").removeClass("is-active");
   });
 });
+if (localStorage.getItem('is-active').toString() != 'true') 
+{
+  launchModal();
+  localStorage.setItem('is-active',true);
+}
 
-
-
-//clear text field
+//clear text field and checkboxes
 function ClearFields() {
-document.getElementById("ingField").value = "",
-document.querySelectorAll('input[type=checkbox]').checked = false;
+document.getElementById("ingField").value = "";
+let checks = document.querySelectorAll("input[type=checkbox]:checked");
+for (let i = 0; i < checks.length; i++)
+  checks[i].checked = false;
 }
 
 var submitBtn = document.querySelector('.button');
@@ -30,6 +35,7 @@ function remoldTiles(parent) {
       parent.removeChild(parent.firstChild);
   }
 }
+
 
 //Main API function for edemam
 function getapiEdemam() {
