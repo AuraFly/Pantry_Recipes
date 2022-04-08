@@ -1,18 +1,18 @@
 $(document).ready(function () {
   $(".modal").addClass("is-active");
   $("#launchModal").click(function () {
-    $(".modal").addClass("is-active");
+  $(".modal").addClass("is-active");
   });
 
   $("#closebtn").click(function () {
     $(".modal").removeClass("is-active");
   });
 });
-if (localStorage.getItem('is-active').toString() != 'true') 
-{
-  launchModal();
-  localStorage.setItem('is-active',true);
-}
+// if (localStorage.getItem('is-active').toString() != 'true') 
+// {
+//   launchModal();
+//   localStorage.setItem('is-active',true);
+// }
 
 //clear text field and checkboxes
 function ClearFields() {
@@ -22,7 +22,7 @@ for (let i = 0; i < checks.length; i++)
   checks[i].checked = false;
 }
 
-var submitBtn = document.querySelector('.button');
+var submitBtn = document.getElementById('submitBtn');
 var bhBtn = document.getElementById("bhBtn")
 var searchCount = 0;
 var elCount = 0;
