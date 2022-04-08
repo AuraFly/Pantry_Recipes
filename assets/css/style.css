@@ -5,7 +5,6 @@ html {
     
 }
 
-
 .input {
     position: relative;
     bottom: 1px;
@@ -87,6 +86,10 @@ h3 {
     font-weight: bold;
     color: black;
     padding-bottom: 10px;
+}
+
+h3.resultsh {
+    padding: 5px;
 }
 
 #title1 {
@@ -267,4 +270,13 @@ h3 {
     margin-top: 2px;
     color: black;
     font-weight: normal;
+    border: 1px black solid;
+}
+
+#tile.is-child {
+    position: relative;
+    margin-top: 20px;
+}
+#map {
+    bottom: 0;
 }
