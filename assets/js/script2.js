@@ -1,9 +1,41 @@
 function movetoMain () {
     window.location = "./index.html";
+};
+
+// function to pull favorites from local storage if available
+favArray2 = JSON.parse(localStorage.getItem("favArr"))
+favArray = []
+
+if (favArray2 !== null) {
+var favArray = favArray.concat(favArray2);
 }
 
+if (favArray.length >= 1) {
+    favArray.forEach(function (iiL) {
+        var favEntry = $("<div>")
+        .attr({
+        "class": "navbar-item",
+        "id": "favitem"
+        });
+
+        $("#navbarFav").append(favEntry);
+
+        console.log(favArray)
+
+        var favLink = $("<a>")
+        .text(iiL.favLabel1)
+        .attr({
+        "href": iiL.favUrl1
+        });
+
+        $(favEntry).append(favLink);
+    });
+}
+
+//saving the chosen recipe from the previous page into a variable
 var viewedRecipe = JSON.parse(localStorage.getItem("storedRecipe"));
 
+// dynamically creates info for the saved recipe
     var recipeMain = $("<div>")
     .attr({
     "class": "tile is-child",
@@ -50,6 +82,7 @@ var viewedRecipe = JSON.parse(localStorage.getItem("storedRecipe"));
 
     $(recipeMain).append(mainHeader, mainImage, mainp, mainp2, mainBtn);
 
+    //dynamically creating unordered lists
     var recipeSec = $("<div>")
     .attr({
     "class": "tile is-parent",
@@ -73,6 +106,8 @@ var viewedRecipe = JSON.parse(localStorage.getItem("storedRecipe"));
         "id": "nutriUl"
     });
 
+
+    //dynamically creating list items to set in those lists
     viewedRecipe.recipe.ingredientLines.forEach((iteminloop) => {
         var ingLi = $("<li>")
         .text(iteminloop)
@@ -121,9 +156,12 @@ var viewedRecipe = JSON.parse(localStorage.getItem("storedRecipe"));
      });
      }
      
+     //below function is to save the favorite information, and stash it
+     // so it can display if the page is reloaded or if the home page is loaded
+    var fCount = -1;
 
      $("body").on('click', '#saveBtn', function(){
-
+        fCount++;
         var favEntry = $("<div>")
         .attr({
         "class": "navbar-item",
@@ -140,6 +178,15 @@ var viewedRecipe = JSON.parse(localStorage.getItem("storedRecipe"));
 
         $(favEntry).append(favLink);
 
+        let favTemp = {};
+        favTemp["favLabel1"] = viewedRecipe.recipe.label
+        favTemp["favUrl1"] = viewedRecipe.recipe.url
+        favArray.push(favTemp);
+        
+        console.log(favArray)
+
+        localStorage.setItem("favArr", JSON.stringify(favArray));
+        localStorage.setItem("countAfter", fCount);
       });
 
 

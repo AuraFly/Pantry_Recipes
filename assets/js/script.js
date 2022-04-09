@@ -8,11 +8,36 @@ $(document).ready(function () {
     $(".modal").removeClass("is-active");
   });
 });
-// if (localStorage.getItem('is-active').toString() != 'true') 
-// {
-//   launchModal();
-//   localStorage.setItem('is-active',true);
-// }
+
+
+favArray2 = JSON.parse(localStorage.getItem("favArr"))
+favArray = []
+
+if (favArray2 !== null) {
+var favArray = favArray.concat(favArray2);
+}
+
+if (favArray.length >= 1) {
+    favArray.forEach(function (iiL) {
+        var favEntry = $("<div>")
+        .attr({
+        "class": "navbar-item",
+        "id": "favitem"
+        });
+
+        $("#navbarFav").append(favEntry);
+
+        console.log(favArray)
+
+        var favLink = $("<a>")
+        .text(iiL.favLabel1)
+        .attr({
+        "href": iiL.favUrl1
+        });
+
+        $(favEntry).append(favLink);
+    });
+}
 
 //clear text field and checkboxes
 function ClearFields() {
@@ -22,6 +47,7 @@ for (let i = 0; i < checks.length; i++)
   checks[i].checked = false;
 }
 
+//variables used for the rest of the script
 var submitBtn = document.getElementById('submitBtn');
 var bhBtn = document.getElementById("bhBtn")
 var searchCount = 0;
@@ -107,8 +133,6 @@ function getapiEdemam() {
         //adds counter to created elements to separate the IDs of each element.
         elCount++;
         var recLink = iteminLoop.recipe.shareAs
-
-        console.log(dArray[0].hits)
 
         var resultTile = $("<div>")
         .attr({
