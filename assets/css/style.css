@@ -2,7 +2,7 @@ html {
     background: url(../Images/IMG_1336.jpg);
     background-size: cover;
     background-attachment: fixed;
-    
+       
 }
 
 .input {
@@ -32,7 +32,8 @@ html {
     font-family: "Righteous";
     background-image: url(../Images/banner.jpg);
     background-size: cover;
-    background-position:  bottom 475px right;
+    background-position: center;
+    /* background-position:  bottom 475px right; */
     border-radius: 0px 0px 20px 20px;
     border-bottom: 5px solid green;
     
@@ -62,6 +63,12 @@ html {
     margin-left: 10px;
 }
 
+.rBtn {
+    font-weight: bold;
+    background: white;
+
+}
+
 .selector {
     font-weight: bold;
     font-size: large;
@@ -81,15 +88,15 @@ html {
     margin-left: 10px;
 }
 
-h3 {
-    font-size: 30px;
-    font-weight: bold;
-    color: black;
-    padding-bottom: 10px;
+h3 {    
+    white-space: nowrap;    
 }
 
-h3.resultsh {
-    padding: 5px;
+.resultsh {
+    /* margin-bottom: 50px; */
+    font-size:  30px;
+    font-weight: bold;
+    color: black;  
 }
 
 #title1 {
@@ -172,7 +179,9 @@ h3 {
 
 .container {
     color: black;
+    
 }
+
 
 /* .container {
     position: absolute;
