@@ -39,4 +39,4 @@
 * https://fdc.nal.usda.gov/
 
 ### Website Preview
-![Website Preview](https://github.com/AuraFly/Pantry_Recipes/blob/main/assets/Images/PantryRecipesPreview.jpeg)
+![Website Preview](https://github.com/AuraFly/Pantry_Recipes/blob/main/assets/Images/PantryRecipesPreview.png)
