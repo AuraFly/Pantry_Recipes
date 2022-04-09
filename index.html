@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  
+  <!--Creates a modal to pop up on page load-->
   <div id="modal" class="modal">
     <div class="modal-background modalshown"></div>
     <div class="modal-content">
@@ -29,7 +29,7 @@
                 <p>
                   <strong>Site Notification</strong>
                   <br>
-                  For full utilization of this site, please nake sure you have location services enabled.
+                  For full utilization of this site, please make sure you have location services enabled.
                 </p>
               </div>
               <button class="button is-info is-small" id="next"><a href="https://www.disney.com">Leave</a></button>
@@ -41,7 +41,10 @@
     <button class="modal-close is-large" aria-label="close"></button>
   </div>
 
+<!--Creates a navbar-->
   <nav class="navbar has-background-red" role="navigation" aria-label="main navigation">     
+    <div class="navbar-brand">
+      <!--Adds the ability for navbar to be mobile friendly-->
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -122,7 +125,7 @@
           <input class="input" type="text" placeholder="Enter your ingredient" id="ingField">
         </div>
       </div>
-
+<!--Creates dropdown menu-->
       <div class="field">
         <label class="label restriction">Subject</label>
         <div class="control">
@@ -138,7 +141,7 @@
           </div>
         </div>
       </div>
-
+<!--Creates checkboxes-->
       <section class="checkboxsec">
         <label class="selector" id="checkbox">Allergies</label>
         <br>
@@ -182,7 +185,7 @@
           <input type="checkbox" value="sesame-free">
           Sesame
         </label>
-
+<!--Creates the submit button and clear fields button-->
         <div class="field is-grouped">
           <div class="control">
             <button class="button is-link" id="submitBtn">Submit</button>
@@ -196,13 +199,9 @@
       <div class="container backgroundImage">
         <h3 class="resultsh"></h3>
         <div class="tile is-ancestor is-vertical" id="ancestor">
-          
           </div>
-
         </div>
-
       </div>
-
     </div>
   </div>
 
