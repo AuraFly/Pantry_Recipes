@@ -2,7 +2,6 @@ html {
     background: url(../Images/IMG_1336.jpg);
     background-size: cover;
     background-attachment: fixed;
-    
 }
 
 .input {
@@ -32,7 +31,8 @@ html {
     font-family: "Righteous";
     background-image: url(../Images/banner.jpg);
     background-size: cover;
-    background-position:  bottom 475px right;
+    background-position: center;
+    /* background-position:  bottom 475px right; */
     border-radius: 0px 0px 20px 20px;
     border-bottom: 5px solid green;
     
@@ -62,6 +62,12 @@ html {
     margin-left: 10px;
 }
 
+.rBtn {
+    font-weight: bold;
+    background: white;
+
+}
+
 .selector {
     font-weight: bold;
     font-size: large;
@@ -81,15 +87,15 @@ html {
     margin-left: 10px;
 }
 
-h3 {
-    font-size: 30px;
-    font-weight: bold;
-    color: black;
-    padding-bottom: 10px;
+h3 {    
+    white-space: nowrap;    
 }
 
-h3.resultsh {
-    padding: 5px;
+.resultsh {
+    /* margin-bottom: 50px; */
+    font-size:  30px;
+    font-weight: bold;
+    color: black;  
 }
 
 #title1 {
@@ -172,7 +178,9 @@ h3 {
 
 .container {
     color: black;
+    
 }
+
 
 /* .container {
     position: absolute;
@@ -204,9 +212,9 @@ h3 {
 #main1 {
     background-color: #768b9e;
     box-shadow: rgba(50, 50, 93, 0.25)
-     0px 50px 100px -20px, rgba(0, 0, 0, 0.3)
-      0px 30px 60px -30px, rgba(10, 37, 64, 0.35)
-       0px -2px 6px 0px inset;
+    0px 50px 100px -20px, rgba(0, 0, 0, 0.3)
+    0px 30px 60px -30px, rgba(10, 37, 64, 0.35)
+    0px -2px 6px 0px inset;
 }
 
 .headp {
@@ -218,8 +226,8 @@ h3 {
 
 .recipeHeader {
     text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-     0px 8px 13px rgba(0,0,0,0.1),
-      0px 18px 23px rgba(0,0,0,0.1);
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
 }
 
 #main2 {
@@ -229,11 +237,11 @@ h3 {
 .mainImage {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.25)
-     0px 54px 55px, rgba(0, 0, 0, 0.12)
-      0px -12px 30px, rgba(0, 0, 0, 0.12)
-       0px 4px 6px, rgba(0, 0, 0, 0.17)
-        0px 12px 13px, rgba(0, 0, 0, 0.09)
-         0px -3px 5px;
+    0px 54px 55px, rgba(0, 0, 0, 0.12)
+    0px -12px 30px, rgba(0, 0, 0, 0.12)
+    0px 4px 6px, rgba(0, 0, 0, 0.17)
+    0px 12px 13px, rgba(0, 0, 0, 0.09)
+    0px -3px 5px;
 }
 
 #link1 {
@@ -248,8 +256,8 @@ h3 {
     margin-right: 45%;
     box-shadow: rgba(50, 50, 93, 0.25)
     0px 50px 100px -20px, rgba(0, 0, 0, 0.3)
-     0px 30px 60px -30px, rgba(10, 37, 64, 0.35)
-      0px -2px 6px 0px inset;
+    0px 30px 60px -30px, rgba(10, 37, 64, 0.35)
+    0px -2px 6px 0px inset;
 }
 
 #ingUl, #nutriUl {
@@ -258,11 +266,11 @@ h3 {
     font-weight: bolder;
     color: black;
     box-shadow: rgba(0, 0, 0, 0.25)
-     0px 54px 55px, rgba(0, 0, 0, 0.12)
-      0px -12px 30px, rgba(0, 0, 0, 0.12)
-       0px 4px 6px, rgba(0, 0, 0, 0.17)
-        0px 12px 13px, rgba(0, 0, 0, 0.09)
-         0px -3px 5px;
+    0px 54px 55px, rgba(0, 0, 0, 0.12)
+    0px -12px 30px, rgba(0, 0, 0, 0.12)
+    0px 4px 6px, rgba(0, 0, 0, 0.17)
+    0px 12px 13px, rgba(0, 0, 0, 0.09)
+    0px -3px 5px;
 }
 
 #ingLi, #nutriLi {
@@ -277,6 +285,7 @@ h3 {
     position: relative;
     margin-top: 20px;
 }
+
 #map {
     bottom: 0;
 }

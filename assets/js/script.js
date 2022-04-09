@@ -1,3 +1,4 @@
+//Make modal open up
 $(document).ready(function () {
   $(".modal").addClass("is-active");
   $("#launchModal").click(function () {
@@ -9,7 +10,7 @@ $(document).ready(function () {
   });
 });
 
-
+// function to pull favorites from local storage if available
 favArray2 = JSON.parse(localStorage.getItem("favArr"))
 favArray = []
 
@@ -38,6 +39,22 @@ if (favArray.length >= 1) {
         $(favEntry).append(favLink);
     });
 }
+
+
+//Make navbar burger active when screen sizre is small
+document.addEventListener('DOMContentLoaded', () => {
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  if ($navbarBurgers.length > 0) {
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  }
+});
 
 //clear text field and checkboxes
 function ClearFields() {

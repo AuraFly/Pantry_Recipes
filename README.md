@@ -37,3 +37,6 @@
 * https://developer.edamam.com/edamam-docs-recipe-api
 * https://developer.kroger.com/reference/
 * https://fdc.nal.usda.gov/
+
+### Website Preview
+![Website Preview](https://github.com/AuraFly/Pantry_Recipes/blob/main/assets/Images/PantryRecipesPreview.png)

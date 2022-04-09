@@ -132,25 +132,25 @@ var viewedRecipe = JSON.parse(localStorage.getItem("storedRecipe"));
 
     $(recipeSec).append(mainingUL, mainnutrUL);
 
+// This allows the map to use your IP address to find your current location
     navigator.geolocation.getCurrentPosition(
         function (position) {
-           initMap(position.coords.latitude, position.coords.longitude)
+        initMap(position.coords.latitude, position.coords.longitude)
         },
-     );
-     
-     function initMap(lat, lng) {
-     
-     var myLatLng = {
+    );
+
+    function initMap(lat, lng) {
+    var myLatLng = {
         lat,
         lng
-     };
-     
-     var map = new google.maps.Map(document.getElementById('map'), {
+};
+
+    var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 15,
         center: myLatLng
-     });
-     
-     var marker = new google.maps.Marker({
+});
+    
+    var marker = new google.maps.Marker({
         position: myLatLng,
         map: map,
      });
@@ -162,6 +162,7 @@ var viewedRecipe = JSON.parse(localStorage.getItem("storedRecipe"));
 
      $("body").on('click', '#saveBtn', function(){
         fCount++;
+
         var favEntry = $("<div>")
         .attr({
         "class": "navbar-item",
@@ -188,6 +189,7 @@ var viewedRecipe = JSON.parse(localStorage.getItem("storedRecipe"));
         localStorage.setItem("favArr", JSON.stringify(favArray));
         localStorage.setItem("countAfter", fCount);
       });
+
 
 
 bhBtn.addEventListener('click', movetoMain);
