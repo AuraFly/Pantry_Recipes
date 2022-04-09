@@ -2,7 +2,6 @@ html {
     background: url(../Images/IMG_1336.jpg);
     background-size: cover;
     background-attachment: fixed;
-       
 }
 
 .input {
@@ -213,9 +212,9 @@ h3 {
 #main1 {
     background-color: #768b9e;
     box-shadow: rgba(50, 50, 93, 0.25)
-     0px 50px 100px -20px, rgba(0, 0, 0, 0.3)
-      0px 30px 60px -30px, rgba(10, 37, 64, 0.35)
-       0px -2px 6px 0px inset;
+    0px 50px 100px -20px, rgba(0, 0, 0, 0.3)
+    0px 30px 60px -30px, rgba(10, 37, 64, 0.35)
+    0px -2px 6px 0px inset;
 }
 
 .headp {
@@ -227,8 +226,8 @@ h3 {
 
 .recipeHeader {
     text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-     0px 8px 13px rgba(0,0,0,0.1),
-      0px 18px 23px rgba(0,0,0,0.1);
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
 }
 
 #main2 {
@@ -238,11 +237,11 @@ h3 {
 .mainImage {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.25)
-     0px 54px 55px, rgba(0, 0, 0, 0.12)
-      0px -12px 30px, rgba(0, 0, 0, 0.12)
-       0px 4px 6px, rgba(0, 0, 0, 0.17)
-        0px 12px 13px, rgba(0, 0, 0, 0.09)
-         0px -3px 5px;
+    0px 54px 55px, rgba(0, 0, 0, 0.12)
+    0px -12px 30px, rgba(0, 0, 0, 0.12)
+    0px 4px 6px, rgba(0, 0, 0, 0.17)
+    0px 12px 13px, rgba(0, 0, 0, 0.09)
+    0px -3px 5px;
 }
 
 #link1 {
@@ -257,8 +256,8 @@ h3 {
     margin-right: 45%;
     box-shadow: rgba(50, 50, 93, 0.25)
     0px 50px 100px -20px, rgba(0, 0, 0, 0.3)
-     0px 30px 60px -30px, rgba(10, 37, 64, 0.35)
-      0px -2px 6px 0px inset;
+    0px 30px 60px -30px, rgba(10, 37, 64, 0.35)
+    0px -2px 6px 0px inset;
 }
 
 #ingUl, #nutriUl {
@@ -267,11 +266,11 @@ h3 {
     font-weight: bolder;
     color: black;
     box-shadow: rgba(0, 0, 0, 0.25)
-     0px 54px 55px, rgba(0, 0, 0, 0.12)
-      0px -12px 30px, rgba(0, 0, 0, 0.12)
-       0px 4px 6px, rgba(0, 0, 0, 0.17)
-        0px 12px 13px, rgba(0, 0, 0, 0.09)
-         0px -3px 5px;
+    0px 54px 55px, rgba(0, 0, 0, 0.12)
+    0px -12px 30px, rgba(0, 0, 0, 0.12)
+    0px 4px 6px, rgba(0, 0, 0, 0.17)
+    0px 12px 13px, rgba(0, 0, 0, 0.09)
+    0px -3px 5px;
 }
 
 #ingLi, #nutriLi {
@@ -286,6 +285,7 @@ h3 {
     position: relative;
     margin-top: 20px;
 }
+
 #map {
     bottom: 0;
 }
